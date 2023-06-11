@@ -1,9 +1,30 @@
-<mxfile host="app.diagrams.net" modified="2023-06-09T16:01:06.249Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" version="21.3.6" etag="3kiTlakj1QvBAN4Fjtgn" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-11T16:28:31.995Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="QJ06DqD6Yi4wkyaPkP2l" version="21.3.8" type="github">
   <diagram name="Page-1" id="NF9XIQLUqZQIiAyMFW7P">
-    <mxGraphModel>
+    <mxGraphModel dx="794" dy="477" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="z2n-fzEaXahUknopTU6a-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="30" width="310" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="z2n-fzEaXahUknopTU6a-2" value="Yashirish kerak bo&#39;lgan tekst" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="z2n-fzEaXahUknopTU6a-3" value="size" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="140" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="z2n-fzEaXahUknopTU6a-4" value="select, format" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="200" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="z2n-fzEaXahUknopTU6a-5" value="color" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="260" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="z2n-fzEaXahUknopTU6a-6" value="bgcolor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="330" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="z2n-fzEaXahUknopTU6a-7" value="Jo&#39;natish" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="400" width="120" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
