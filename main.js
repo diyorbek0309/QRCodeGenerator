@@ -7,54 +7,44 @@
 //     console.log(err);
 //   });
 
+const dataChangeHandler = () => {
+  if (document.getElementById("url").value.length > 0) {
+    document.querySelector("button").classList.add("submit-active");
+  } else {
+    document.querySelector("button").classList.remove("submit-active");
+  }
+};
+
 const apiUrl = "https://api.qrserver.com/v1/create-qr-code/";
 
-const data = prompt("Shifrlamoqchi bo'lgan matningizni kiriting:");
+const submitHandler = () => {
+  event.preventDefault();
+  const data = document.getElementById("url").value;
+  const color = document.getElementById("color").value.slice(1);
+  const bgcolor = document.getElementById("bgcolor").value.slice(1);
+  const size = document.getElementById("size").value;
 
-fetch(
-  `${apiUrl}?size=200x200&color=00FF00&bgcolor=000&data=${encodeURIComponent(
-    data
-  )}`
-)
-  .then((res) => res.blob())
-  .then((blob) => {
-    const qrCodeImage = document.createElement("img");
-    qrCodeImage.src = URL.createObjectURL(blob);
-    qrCodeImage.alt = "QR Code";
+  fetch(
+    `${apiUrl}?size=${size}x${size}&color=${color}&bgcolor=${bgcolor}&data=${encodeURIComponent(
+      data
+    )}`
+  )
+    .then((res) => res.blob())
+    .then((blob) => {
+      const qrCodeImage = document.createElement("img");
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.setAttribute("download", "");
+      qrCodeImage.src = URL.createObjectURL(blob);
+      qrCodeImage.alt = "QR Code";
 
-    const qrcodeContainer = document.getElementById("qrcode");
-    qrcodeContainer.innerHTML = "";
+      const qrcodeContainer = document.getElementById("qrcode-resolt");
+      qrcodeContainer.innerHTML = "";
 
-    qrcodeContainer.appendChild(qrCodeImage);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-// const Urgench = fetch(
-//   "https://api.openweathermap.org/data/2.5/weather?q=Urgench&appid=28824b46851a478eaa59e646200fd6cd"
-// ).then((res) => res.json());
-
-// const Tashkent = fetch(
-//   "https://api.openweathermap.org/data/2.5/weather?q=Tashkent&appid=28824b46851a478eaa59e646200fd6cd"
-// ).then((res) => res.json());
-
-// const Samarkand = fetch(
-//   "https://api.openweathermap.org/data/2.5/weather?q=Samarkand&appid=28824b46851a478eaa59e646200fd6cd"
-// ).then((res) => res.json());
-
-// Promise.all([Urgench, Tashkent, Samarkand])
-//   .then((res) => {
-//     console.log(res);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
-
-// Promise.race([Urgench, Tashkent, Samarkand])
-//   .then((res) => {
-//     console.log(res);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
+      a.appendChild(qrCodeImage);
+      qrcodeContainer.appendChild(a);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};

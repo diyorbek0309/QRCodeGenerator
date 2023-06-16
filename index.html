@@ -4,17 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="main.css" />
   </head>
+
   <body>
-    <div id="qrcode"></div>
-    <!-- 
-      qr_code_text - string;
-      foreground_color - string;
-      background_color - string;
-      image_format - string;
-      image_width - number;
-    -->
+    <div class="container">
+      <h1 class="title"><span>QR</span>code <span>G</span>enerator</h1>
+      <div class="qrcode-generator">
+        <form class="form-wrapper" onsubmit="submitHandler()">
+          <h2 class="form-wrapper__title">Ma'lumotlarni kiriting</h2>
+          <label for="url">Shifrlamoqchi bo'lgan matningizni kiriting:</label>
+          <br />
+          <input
+            id="url"
+            type="text"
+            placeholder="Enter URL"
+            oninput="dataChangeHandler()"
+            minlength="1"
+            required
+          /><br />
+          <label for="color">Nuqtalar rangini kiriting:</label>
+          <input id="color" type="color" /><br />
+          <label for="bgcolor">Orqa fon rangi:</label>
+          <input id="bgcolor" type="color" value="#ffffff"/><br />
+          <label for="size">QRCode hajmi (px):</label><br />
+          <input id="size" type="number" placeholder="Enter size" />
+          <button id="submit" class="submit-passive" type="submit">
+            Jo'natish
+          </button>
+        </form>
+        <div id="qrcode-resolt">
+          <div class="loader">
+            <div class="load load-1"></div>
+            <div class="load load-2"></div>
+            <div class="load load-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
